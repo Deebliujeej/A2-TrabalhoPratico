@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* corpo da pagina */
@@ -32,7 +33,7 @@ body {
 
 .sidebar {
     font-size: 24px;
-    width: 250px;
+    width: 269px;
     background-color: #171a21;
     padding: 20px;
     height: 100vh;
@@ -45,7 +46,7 @@ body {
     margin-bottom: 5px;
     padding: 9px;
     border-radius: 5px;
-    transition: background 0.2s;
+    transition: background 0.3s;
 }
 
 .sidebar a:hover {
@@ -64,6 +65,7 @@ body {
 }
 
 .main h1 {
+    font-size: 38px;
     margin-bottom: 29px;
     display: flex;
     justify-content: center;
@@ -79,14 +81,13 @@ body {
 .card {
     background-color: #2a2f36;
     position: relative;
-    overflow: hidden;
     border-radius: 10px;
-    padding: 10px;
+    padding: 8px;
     text-align: center;
     transition: transform 0.2s;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 .card a{
     text-decoration: none;
