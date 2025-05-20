@@ -54,15 +54,52 @@ body {
 }
 
 /* conteudo principal */
-
-.main {
-    flex: 1;
-    padding: 69px;
-    overflow-y: auto;
+.main{
+    width: 100%;
 }
 
-.main h1 {
-    margin-bottom: 29px;
-    display: flex;
-    justify-content: center;
+.sobre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  gap: 30px;
+  padding: 60px 40px;
+  max-width: 700px;
+  max-height: 500px;
+  flex-wrap: wrap; 
+  background-color: #171a21;
 }
+
+.imagem img {
+
+  width: 200px;
+  border-radius: 12px;
+}
+
+.texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.texto h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
+}
+
+.texto p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.texto h4{
+    
+    padding-top: 50px;
+    
+}
+

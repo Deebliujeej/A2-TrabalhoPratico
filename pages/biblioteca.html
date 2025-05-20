@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <!-- Barra Lateral -->
     <nav class="sidebar">
         <div class="logo">
@@ -17,9 +18,9 @@
             <h2>Voyager</h2>
         </div>
         <a href="https://steamcommunity.com/profiles/76561198305580155/ ">Perfil</a>
-        <a href="../pages/biblioteca.html" class="paginainicial">Biblioteca</a>
+        <a href="../pages/biblioteca.html" class="paginaatual">Biblioteca</a>
         <a href="">Loja</a>
-        <a href="sobre.html">Sobre</a>
+        <a href="../pages/sobre.html">Sobre</a>
         <a href="">Configurações</a>
     </nav>
     <!-- Galeria De Jogos -->
@@ -28,20 +29,28 @@
         <div class="galeria">
             <!-- Jogos Exemplo -->
             <div class="card">
-                <img src="../assets/DarkSouls1.jpg" alt="darkSouls1">
-                <h3>Dark Souls Remastered</h3>
+                <a href="">
+                    <img src="../assets/DarkSouls1.jpg" alt="darkSouls1">
+                    <h3>Dark Souls Remastered</h3>
+                </a>
             </div>
             <div class="card">
+                <a href="">
                 <img src="../assets/Subnautica.avif" alt="Subnautica">
                 <h3>Subnautica</h3>
+                </a>
             </div>
             <div class="card">
+                <a href="">
                 <img src="../assets/outerwilds.webp" alt="outerwilds">
                 <h3>Outer Wilds</h3>
+                </a>
             </div>
             <div class="card">
+                <a href="">
                 <img src="../assets/eldenring.avif" alt="eldenring">
                 <h3>Elden Ring</h3>
+                </a>
             </div>
             <div class="card">
                 <img src="../assets/silksong.jpg" alt="Silksong">
@@ -71,7 +80,7 @@
                 <img src="../assets/sekiro.png" alt="sekiro">
                 <h3>Sekiro</h3>
             </div>
-             <div class="card">
+            <div class="card">
                 <img src="../assets/deathsdoor.avif" alt="deathdoor">
                 <h3>Death's Door</h3>
             </div>
@@ -93,6 +102,26 @@
             </div>
         </div>
     </main>
+
+    <!-- script para os cards aparecerem com animação na tela -->
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        cards.forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+
 </body>
 
 </html>
